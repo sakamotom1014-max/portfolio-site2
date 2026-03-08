@@ -1,0 +1,530 @@
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #F2EBDC;
+    margin: 4rem 0 0;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    padding: 0 2rem;
+    height: 80px;
+    background-color: #f8f8f8;
+    border-bottom: 1px solid #eee;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 1px 1px 5px #a5a2a2;
+}
+
+.pcmenu ul,
+footer ul {
+    display: flex;
+    gap: 1.5rem;
+}
+
+header li,
+footer li {
+    list-style-type: none;
+}
+
+header li a,
+footer li a {
+    text-decoration: none;
+    color: #2e3068;
+    font-weight: bold;
+}
+
+header li a:hover {
+    color: #5f6070;
+}
+
+.logo img {
+    height: 60px;
+    width: auto;
+    display: block;
+}
+
+section {
+    margin: 4rem 0;
+}
+
+.brank {
+    display: inline-block;
+}
+
+.container {
+    max-width: 1300px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0 1rem;
+}
+
+h1,
+p,
+h2 {
+    text-align: center;
+}
+
+.top {
+    position: relative;
+}
+
+h1 {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3rem;
+    color: #fff;
+    font-family: "Shippori Mincho", serif;
+    text-shadow: 2px 2px 5px #000;
+    margin: 0;
+    width: 100%;
+}
+
+.line {
+    width: 100%;
+}
+
+.top img,
+.point-img {
+    width: auto;
+    max-width: 100%;
+}
+
+.tour-ex {
+    font-size: 1.8rem;
+    color: #823e3e;
+    font-weight: bold;
+    background: linear-gradient(transparent 10%, #e8caca 100%);
+    display: inline-block;
+}
+
+.service {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: 5rem;
+    gap: 1rem;
+}
+
+.tour-ex,
+.service {
+    font-family: "Hina Mincho", serif;
+}
+
+.point {
+    margin: auto;
+    font-size: 1.5rem;
+    z-index: 1;
+    position: relative;
+    color: #493535;
+    font-weight: 600;
+}
+
+.point::after {
+    position: absolute;
+    content: "";
+    width: 150px;
+    height: 150px;
+    background-color: rgba(243, 215, 206, 0.5);
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+h2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    font-family: "Noto Serif JP", serif;
+    color: #364335;
+    font-size: 2rem;
+}
+
+h2::before,
+h2::after {
+    content: "";
+    flex: 1;
+    height: 2px;
+    background: linear-gradient(270deg, #889687, transparent);
+}
+
+h2::after {
+    background: linear-gradient(45deg, #889687, transparent);
+}
+
+.schedule-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+.schedule,
+.price {
+    margin: 0 auto 2rem;
+}
+
+.schedule {
+    width: 100%;
+    align-self: start;
+    border-collapse: collapse;
+}
+
+.time {
+    color: #223d0a;
+}
+
+.content,
+.time {
+    text-align: left;
+    padding: 1rem 0.5rem;
+    border-bottom: solid 2px #cac5c5;
+    background-color: #f9f7f5;
+}
+
+.schedule-main {
+    font-size: 1.2rem;
+    background: linear-gradient(135deg, #757b63, #9aa380);
+    color: #fff;
+    padding: 1rem;
+}
+
+.schedule-main,
+.price-menu,
+.price-group {
+    font-family: "BIZ UDPMincho", serif;
+}
+
+.schedule tr:last-child th,
+.schedule tr:last-child td {
+    border-bottom: none;
+}
+
+.price {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 0;
+    border: solid 1px #575555;
+}
+
+.price-group,
+.price-menu {
+    background: linear-gradient(180deg, #686370, #837f89);
+    color: #fff;
+    padding: 0.5rem;
+    font-size: 1.4rem;
+}
+
+.price-menu {
+    border-left: solid 1px #fff;
+}
+
+.price-detail {
+    border: solid 1px #575555;
+    padding: 0.5rem 2rem;
+    background-color: #f9f7f5;
+    font-size: 1.3rem;
+}
+
+.caution {
+    text-align: right;
+}
+
+/* FAQ 全体 */
+.faq {
+    background-color: #ccc4c0;
+    margin-bottom: 0.5rem;
+}
+
+/* summary（質問部分） */
+.faq summary {
+    display: block;
+    padding: 2rem;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1.3rem;
+    list-style: none;
+    /* デフォルトの矢印を消す */
+    position: relative;
+    padding-right: 24px;
+    text-align: left;
+    color: #383737;
+}
+
+/* デフォルト矢印を完全に消す（Safari対策） */
+.faq summary::-webkit-details-marker {
+    display: none;
+}
+
+/* カスタム矢印（右側） */
+.faq summary::after {
+    content: "＋";
+    position: absolute;
+    right: 2rem;
+    transition: transform 0.3s ease;
+}
+
+/* 開いたときの矢印 */
+.faq[open] summary::after {
+    content: "－";
+}
+
+/* 回答部分 */
+.answer {
+    margin-top: 0;
+    line-height: 1.7;
+    color: #2a2a2a;
+    padding: 0 2rem 2rem;
+    animation: fadeIn 0.3s ease;
+    text-align: left;
+    font-size: 1.2rem;
+}
+
+footer {
+    background-color: #212241;
+    padding: 2rem;
+    margin-top: 5rem;
+}
+
+footer ul {
+    gap: 1rem;
+    justify-content: center;
+}
+
+footer li a,
+.footer-copy {
+    color: #fff;
+}
+
+@media screen and (min-width: 768px) {
+
+    .spmenu,
+    .spbr {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .tour-ex {
+        font-size: 1.5rem;
+    }
+
+    .point {
+        font-size: 1.2rem;
+    }
+
+    .schedule-list {
+        overflow: auto;
+    }
+
+    .schedule {
+        white-space: nowrap;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .pcmenu {
+        display: none;
+    }
+
+    .spmenu {
+        text-align: right;
+    }
+
+    header {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    /* ハンバーガーボタン */
+    .menu-btn {
+        position: relative;
+        display: inline-block;
+        width: 30px;
+        height: 22px;
+        cursor: pointer;
+        z-index: 1000;
+    }
+
+    .menu-btn span,
+    .menu-btn span::before,
+    .menu-btn span::after {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 3px;
+        background-color: #333;
+        border-radius: 3px;
+        transition: 0.3s;
+    }
+
+    .menu-btn span {
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .menu-btn span::before {
+        content: "";
+        top: -8px;
+    }
+
+    .menu-btn span::after {
+        content: "";
+        top: 8px;
+    }
+
+    /* チェックが入ったら × に変形 */
+    #menu-btn-check:checked+.menu-btn span {
+        background-color: transparent;
+    }
+
+    #menu-btn-check:checked+.menu-btn span::before {
+        top: 0;
+        transform: rotate(45deg);
+    }
+
+    #menu-btn-check:checked+.menu-btn span::after {
+        top: 0;
+        transform: rotate(-45deg);
+    }
+
+    /* メニュー本体 */
+    .menu-content {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 50%;
+        height: 100vh;
+        background: #fff;
+        padding: 3rem 1rem;
+        transition: 0.4s;
+        box-shadow: -2px 0 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .menu-content ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    .menu-content li {
+        margin-bottom: 20px;
+    }
+
+    .menu-content a {
+        text-decoration: none;
+        font-size: 1rem;
+        color: #2e3068;
+    }
+
+    /* チェックが入ったらメニューを表示 */
+    #menu-btn-check:checked~.menu-content {
+        right: 0;
+    }
+
+    /* チェックボックスは非表示 */
+    #menu-btn-check {
+        display: none;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .tour-ex {
+        font-size: 1.2rem;
+    }
+
+    .service {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 2rem;
+        gap: 0.5rem;
+    }
+
+    .point-img {
+        order: -1;
+    }
+
+    .point::after {
+        width: 200px;
+        height: 50px;
+    }
+
+    .text-md {
+        font-size: 1.1rem;
+    }
+
+    .text-sm {
+        font-size: 0.9rem;
+    }
+
+    .faq summary {
+        padding: 1.5rem 0.5rem;
+    }
+
+    .price-detail {
+        padding: 0.5rem;
+    }
+
+    footer ul {
+        display: block;
+        padding: 0;
+    }
+
+    footer li {
+        margin-bottom: 1rem;
+    }
+
+    .footer-copy {
+        text-align: left;
+        margin-top: 2rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 1.4rem;
+        top: 40%;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+        gap: 1rem;
+    }
+
+    .tour-ex {
+        font-size: 1rem;
+    }
+
+    .point,
+    .faq summary {
+        font-size: 0.9rem;
+    }
+
+    .answer {
+        font-size: 0.8rem;
+    }
+
+    .faq summary::after {
+        right: 0.2rem;
+    }
+}
