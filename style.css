@@ -10,7 +10,7 @@ body {
 
 body {
     background-color: #F2EBDC;
-    margin: 4rem 0 0;
+    margin-top: 5rem;
 }
 
 header {
@@ -338,6 +338,10 @@ footer li a,
 }
 
 @media screen and (max-width: 767px) {
+    section {
+        margin: 2rem 0;
+    }
+
     .pcmenu {
         display: none;
     }
