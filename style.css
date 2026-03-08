@@ -312,6 +312,16 @@ footer li a,
     }
 }
 
+@media screen and (max-width: 1120px) {
+    .schedule-list {
+        overflow: auto;
+    }
+
+    .schedule {
+        white-space: nowrap;
+    }
+}
+
 @media screen and (max-width: 960px) {
     .tour-ex {
         font-size: 1.5rem;
@@ -319,14 +329,6 @@ footer li a,
 
     .point {
         font-size: 1.2rem;
-    }
-
-    .schedule-list {
-        overflow: auto;
-    }
-
-    .schedule {
-        white-space: nowrap;
     }
 }
 
