@@ -245,13 +245,11 @@ h2::after {
     text-align: right;
 }
 
-/* FAQ 全体 */
 .faq {
-    background-color: #ccc4c0;
+    background-color: #e0d3d1;
     margin-bottom: 0.5rem;
 }
 
-/* summary（質問部分） */
 .faq summary {
     display: block;
     padding: 2rem;
@@ -259,19 +257,16 @@ h2::after {
     font-weight: 600;
     font-size: 1.3rem;
     list-style: none;
-    /* デフォルトの矢印を消す */
     position: relative;
     padding-right: 24px;
     text-align: left;
     color: #383737;
 }
 
-/* デフォルト矢印を完全に消す（Safari対策） */
 .faq summary::-webkit-details-marker {
     display: none;
 }
 
-/* カスタム矢印（右側） */
 .faq summary::after {
     content: "＋";
     position: absolute;
@@ -279,12 +274,10 @@ h2::after {
     transition: transform 0.3s ease;
 }
 
-/* 開いたときの矢印 */
 .faq[open] summary::after {
     content: "－";
 }
 
-/* 回答部分 */
 .answer {
     margin-top: 0;
     line-height: 1.7;
@@ -355,7 +348,6 @@ footer li a,
         grid-template-columns: 1fr 1fr;
     }
 
-    /* ハンバーガーボタン */
     .menu-btn {
         position: relative;
         display: inline-block;
@@ -392,7 +384,6 @@ footer li a,
         top: 8px;
     }
 
-    /* チェックが入ったら × に変形 */
     #menu-btn-check:checked+.menu-btn span {
         background-color: transparent;
     }
@@ -407,7 +398,6 @@ footer li a,
         transform: rotate(-45deg);
     }
 
-    /* メニュー本体 */
     .menu-content {
         position: fixed;
         top: 0;
@@ -435,12 +425,10 @@ footer li a,
         color: #2e3068;
     }
 
-    /* チェックが入ったらメニューを表示 */
     #menu-btn-check:checked~.menu-content {
         right: 0;
     }
 
-    /* チェックボックスは非表示 */
     #menu-btn-check {
         display: none;
     }
